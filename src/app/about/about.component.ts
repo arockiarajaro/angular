@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+  name:string;
+  constructor() { 
+    this.name="First Angular App";
+  }
 
   ngOnInit() {
+  }
+
+  updateDate(nameDate:string)
+  {
+    this.name=nameDate;
   }
 
 }

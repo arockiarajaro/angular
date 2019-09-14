@@ -12,4 +12,8 @@ export class UserserviceService {
   {
    return this.http.get("https://jsonplaceholder.typicode.com/posts");
   }
+  getSessionData()
+  {
+    return this.http.get("http://demo3872473.mockable.io/sessions");
+  }
 }

@@ -11,7 +11,9 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { AddStringPipe } from './add-string.pipe';
 import {HttpClientModule} from '@angular/common/http'
-import {UserserviceService} from './news/userservice.service'
+import {UserserviceService} from './news/userservice.service';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { AboutDetailsComponent } from './about-details/about-details.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {UserserviceService} from './news/userservice.service'
     NewsComponent,
     ContactComponent,
     AboutComponent,
-    AddStringPipe
+    AddStringPipe,
+    UserDetailsComponent,
+    AboutDetailsComponent
   ],
   imports: [
     BrowserModule,
