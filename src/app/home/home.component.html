@@ -1,0 +1,12 @@
+<p>home works!</p>
+
+ID : {{id}} <br>
+Name : {{name | addString}}  <br>
+Address : {{address}}  <br>
+Date : {{testDate | date:'yyyy/MM/dd'}}
+
+
+<button (click)="onClick()">click</button>
+Name:
+
+<input type="text" [(ngModel)]="name" />

@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>UserID</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Body</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.userId}}</td>
+          <td>{{user.id}}</td>
+          <td>{{user.title}}</td>
+          <td>{{user.body}}</td>
+          <td>
+            <button (click)="onEdit(user)">Edit</button>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
