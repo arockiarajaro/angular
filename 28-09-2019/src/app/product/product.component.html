@@ -1,0 +1,53 @@
+
+<br>
+<br>
+<div class="vertical-menu">
+  
+    <a routerLink="edit" routerLinkActive="active">Edit</a>
+    <a routerLink="details" routerLinkActive="active">Details</a>
+  </div>
+
+  <router-outlet></router-outlet>
+
+  Name : <input type="text" [(ngModel)]="EditedEmployee.employee_name" /> <br>
+  Salary : <input type="text" [(ngModel)]="EditedEmployee.employee_salary" /> <br>
+  Age : <input type="text" [(ngModel)]="EditedEmployee.employee_age" /> <br>
+  <button (click)="update()">Update</button>
+  <button (click)="create()">Create</button>
+  <br>
+  <div>
+      <div class="alert alert-{{alertType}} alert-dismissible" *ngIf="isVisible">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close" (click)="close()">&times;</a>
+         {{alertMessage}}
+        </div>
+  </div>
+  
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>SALARY</th>
+          <th>AGE</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employeeList">
+          <td>{{emp.id}}</td>
+          <td>{{emp.employee_name}}</td>
+          <td>{{emp.employee_salary}}</td>
+          <td>{{emp.employee_age}}</td>
+          <td><button (click)="edit(emp)">Edit</button> 
+          <button (click)="delete(emp.id)">Delete</button>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+
+ 
+    
+  <router-outlet></router-outlet>
