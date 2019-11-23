@@ -1,5 +1,5 @@
 import { Component, OnInit,OnChanges } from '@angular/core';
-import {ActivatedRoute} from '@angular/router'
+import {ActivatedRoute,Router} from '@angular/router'
 
 @Component({
   selector: 'app-details',
@@ -9,8 +9,8 @@ import {ActivatedRoute} from '@angular/router'
 export class DetailsComponent implements OnInit {
 
   id:any;
-  constructor(private route:ActivatedRoute) {
-    
+  constructor(private route:ActivatedRoute,private router:Router) {
+    this.router.routeReuseStrategy.shouldReuseRoute=()=>false;
    }
 
   ngOnInit() {
@@ -19,8 +19,7 @@ export class DetailsComponent implements OnInit {
   }
   ngOnChanges()
   {
-    this.id=this.route.snapshot.paramMap.get("id");
-    console.log(this.id);
+    
   }
 
 }
