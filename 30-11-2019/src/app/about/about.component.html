@@ -1,0 +1,12 @@
+<div class="container">
+    {{name}}
+    <button (click)="add()">Add Address</button><br>
+
+
+    <img src="{{imagepath}}" width="100" height="100" /><br>
+    <input type="file" #file (change)="filechange(file.files)" />
+    <br>
+        <div *ngFor="let todo of todoAddress">
+            <app-childtodo [childData]="todo" (testEvent)=changeValue($event)></app-childtodo>
+        </div>
+  </div>

@@ -1,0 +1,39 @@
+<h1>{{message}}</h1>
+Name : <input type="text" [(ngModel)]="name" />
+<br>
+salary : <input type="text" [(ngModel)]="salary" />
+<br>
+Age : <input type="text" [(ngModel)]="age" />
+<br>
+<button (click)="create()">Create Employee</button>
+<br>
+<br>
+<input type="text" [(ngModel)]="name" />
+<button (click)="createmessage()">Create Message</button>
+<br>
+<div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone No</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todo of todos">
+         <td>{{todo.userId}}</td>
+         <td>{{todo.id}}</td>
+         <td>{{todo.title}}</td>
+         <td>{{todo.completed}}</td>
+          <td>
+            <button (click)="deleteUser(todo)">Delete</button>
+            <button (click)="editUser(todo)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  

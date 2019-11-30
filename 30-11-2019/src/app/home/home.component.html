@@ -1,0 +1,40 @@
+Name : {{name}} <br>
+Address : {{address}} <br>
+Phone No : {{phoneno}} <br>
+
+<input type="text" [(ngModel)]="name" />
+<button (click)="changeDetails()">Click</button>
+
+<input type="text" [value]="name" />
+<br>
+
+<h1>User Detsild</h1>
+NAME : <input type="text" [(ngModel)]="user.name" /> <br>
+ADDRESS : <input type="text" [(ngModel)]="user.address" /><br>
+PHONE : <input type="text" [(ngModel)]="user.phone" /><br>
+<button (click)="addUser()">{{btnText}}</button>
+
+<div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone No</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.name | uppercase}}</td>
+          <td>{{user.address | uppercase}}</td>
+          <td>{{user.phone | uppercase}}</td>
+          <td>
+            <button (click)="deleteUser(user)">Delete</button>
+            <button (click)="editUser(user)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

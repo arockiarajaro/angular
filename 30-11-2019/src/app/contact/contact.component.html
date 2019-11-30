@@ -1,0 +1,18 @@
+
+Address : {{address}}
+<br>
+<br>
+<br>
+<br>
+<input type="text" [(ngModel)]="name" />
+
+<br>
+<br>
+<br>
+{{name | email}}
+<div class="vertical-menu">
+    <a routerLinkActive="active" routerLink="{{address}}/{{id}}/address1">Office Address1</a>
+    <a routerLinkActive="active" routerLink="address2">Office Address2</a>
+    <a routerLinkActive="active" routerLink="address3">Office Address3</a>
+  </div>
+  <router-outlet></router-outlet>
