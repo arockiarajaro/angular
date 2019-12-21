@@ -1,0 +1,11 @@
+
+<h1>Parent Component</h1>
+{{address}}
+
+<app-child [childaddress]="address" [title]="title" (changevalue)="changeaddress($event)">
+  <p>Child Address Child Address</p>
+  <div>Test Div</div>
+</app-child>
+
+<button (click)="onclick()">Click Test</button>
+<router-outlet></router-outlet>

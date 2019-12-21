@@ -1,0 +1,37 @@
+<p>child works!</p>
+
+<h1>Child Component</h1>
+{{address}}
+
+{{title1}}
+
+<button (click)="onclick()">Click</button>
+<ng-content select="p">
+    
+</ng-content>
+<ng-container>
+    <h1>Testing</h1>
+</ng-container>
+
+
+<ng-container *ngFor="let name of nameList">
+<p>{{name}}</p>
+</ng-container>
+
+
+<ng-container *ngTemplateOutlet="temp1">
+
+</ng-container>
+
+<ng-content select="div">
+    
+</ng-content>
+
+<ng-template #temp1>
+<h1>Templete 1</h1>
+</ng-template>
+
+<ng-template #temp2>
+    <h1>Templqte 2</h1>
+</ng-template>
+
